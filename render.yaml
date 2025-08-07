@@ -12,7 +12,7 @@ services:
         sync: false 
 
   # Frontend Service: React Static Site
-  - type: static
+  - type: static site
     name: ghibli-frontend
     rootDir: frontend
     buildCommand: "npm install && npm run build"
