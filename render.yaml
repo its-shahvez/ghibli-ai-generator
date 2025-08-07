@@ -9,16 +9,16 @@ services:
     plan: free
     envVars:
       - key: STABILITY_API_KEY
-        sync: false 
+        sync: false
 
   # Frontend Service: React Static Site
-  - type: static 
+  - type: static
     name: ghibli-frontend
     rootDir: frontend
     buildCommand: "npm install && npm run build"
     publishDir: dist
     plan: free
-    envVars:
+    envVars: # <-- ISE THEEK KAR DIYA HAI
       - key: VITE_API_URL
         fromService:
           type: web
